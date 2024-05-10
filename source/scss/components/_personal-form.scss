@@ -1,0 +1,106 @@
+.personal-form{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 16px;
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 16px;
+        background: var(--gradient-e);
+        border-radius: 21px;
+        @include gradient-border(var(--gr-r), 1px);
+        padding: 24px 30px 30px;
+    }
+
+    &__pretitle{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 143%;
+        color: rgba(var(--cl-c),1.0);
+    }
+
+    &__label{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 12px;
+        position: relative;
+    }
+
+    &__icon{
+        display: block;
+        z-index: 2;
+        position: absolute;
+        right: 15px;
+        bottom: 25px;
+        transform: translateY(50%);
+    }
+
+    &__input{
+        background: rgba(var(--bg-f),1.0);
+        border-radius: 99px;
+        height: 50px;
+        padding: 10px 45px 10px 15px;
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 143%;
+        color: rgba(var(--cl-a),1.0);
+
+        &::placeholder{
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 143%;
+            color: rgba(var(--cl-a),1.0);
+        }
+    }
+
+    &__user{
+       display: grid;
+       grid-template-columns: auto 1fr;
+       grid-gap: 10px 14px;
+        @include gradient-border(var(--gr-r), 1px);
+        background: var(--gradient-e);
+        border-radius: 21px;
+        padding: 24px 30px 30px;
+     
+        .blue-btn{
+           height: 45px;
+           margin-top: 20px;
+           grid-column: span 2;
+           padding: 5px 10px;
+
+           @include for-mobile{
+            max-width: 259px;
+            justify-self: center;
+           }
+        }
+    }
+
+    &__title{
+        font-family: var(--second-family);
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    &__mail{
+        font-family: var(--second-family);
+        font-size: 14px;
+        color: rgba(var(--cl-c),1.0);
+    }
+
+    &__image{
+        border-radius: 12px;
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+        grid-column: 1;
+        grid-row: span 2;
+
+        img,picture{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

@@ -1,0 +1,47 @@
+.header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 90;
+  background-color: transparent;
+  padding: 14px 0 14px;
+
+  &__inner {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr;
+    grid-gap: clamp(20px, 3.9316vw, 46px);
+  }
+
+  .logo {
+    img,picture{
+    width: 125px;
+    height: 30px;
+    }
+  }
+
+
+  &__user{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    grid-gap: 7px;
+    position: relative;
+    z-index: 1;
+    justify-self: end;
+    &-image{
+      width: 34px;
+      height: 34px;
+      overflow: hidden;
+      border-radius: 11px;
+      flex-shrink: 0;
+    }
+  }
+
+  &__name{
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 14px;
+  }
+}

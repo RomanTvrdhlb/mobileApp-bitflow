@@ -1,0 +1,36 @@
+.exit-section{
+    padding: calc(var(--header-height) + 50px) 0 142px;
+    overflow: hidden;
+    
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 24px;
+    }
+
+    .dashboard-top{
+        margin-bottom: 21px;
+
+        &__title{
+            &-icon{
+                margin-top: 0;
+            }
+        }
+    }
+
+
+    &__title{
+        font-family: var(--second-family);
+        font-weight: 800;
+        font-size: 24px;
+    }
+
+    &__btns{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        backdrop-filter: blur(10.800000190734863px);
+        border-radius: 99px;
+        background: rgba(var(--bg-e),.35);
+    }
+}

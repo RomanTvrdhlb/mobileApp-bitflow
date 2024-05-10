@@ -1,0 +1,45 @@
+.main-referral{
+    display: flex;
+    grid-gap: 10px;
+    flex-direction: column;
+ 
+    &__link{
+        font-family: var(--second-family);
+        font-weight: 700;
+        font-size: 14px;
+        color: rgba(var(--cl-c),1.0);
+        background: var(--gr-x);
+        border-radius: 12px;
+        padding: 18px 30px;
+        @include gradient-border(var(--gr-w), 1px);
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    &__btns{
+        display: flex;
+        align-items: center;
+        grid-gap: 14px;
+
+        .blue-btn{
+            font-family: var(--font-family);
+            height: 50px;
+            grid-gap: 10px;
+            font-weight: 500;
+            padding: 16px 14px 20px;
+            @include tablet{
+                min-width: clamp(165px, 19.434vw, 199px);
+            }
+
+            svg,img{
+                position: relative;
+                top: 2px;
+            }
+        }
+
+        @include ios{
+            flex-wrap: wrap;
+        }
+    }
+}

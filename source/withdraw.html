@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+  @include('partials/header-dashbord.html')
+
+  <main>
+    <section class="withdraw-section">
+      <div class="container">
+        <div class="withdraw-section__box">
+          <div class="dashboard-top">
+            <h1 class="dashboard-top__title">
+              <span class="dashboard-top__title-icon">
+                <svg width='45' height='45'>
+                  <use href='img/sprite/sprite.svg#wallet'></use>
+                </svg>
+              </span>
+              Withdraw
+            </h1>
+
+            <div class="dashboard-top__inner">
+              <span class="dashboard-top__image">
+                <svg width='45' height='45'>
+                  <use href='img/sprite/sprite.svg#alert'></use>
+                </svg>
+              </span>
+              <p>In this section, we offer you convenient options for withdrawing funds or exchanging them. To
+                withdraw funds, you need to select the desired currency, specify the amount, and provide your wallet
+                address. Please note the minimum withdrawal amount for a successful transaction.</p>
+            </div>
+          </div>
+
+          <div class="withdraw-section__inner">
+            <form class="search">
+              <div class="search__label">
+                <input class="search__input" type="text" name="search_2" id="search_2" placeholder="Search">
+                <span class="search__border"></span>
+                <button class="search__btn">
+                  <svg width='24' height='24'>
+                    <use href='img/sprite/sprite.svg#search'></use>
+                  </svg>
+                </button>
+              </div>
+            </form>
+
+            <ul class="withdraw-section__list">
+              <li class="withdraw-section__item">
+                <div class="withdraw-row withdraw-row--head">
+                  <span class="withdraw-row__name">Coin</span>
+                  <span class="withdraw-row__name">Balance</span>
+                </div>
+              </li>
+              <li class="withdraw-section__item">
+                <div class="withdraw-row">
+                  <div class="withdraw-row__box">
+                    <span class="withdraw-row__icon">
+                      <img width='45' height='45' src="./img/icons/btc2.svg" alt="icon">
+                    </span>
+                    <span class="withdraw-row__title">BTC</span>
+                    <span class="withdraw-row__name">Bitcoin</span>
+                  </div>
+                  <span class="withdraw-row__value">0.00000000 <b>BTC</b></span>
+                  <div class="withdraw-row__btns">
+                    <button class="blue-btn">Withdraw
+                      <span></span>
+                    </button>
+                    <button class="blue-btn">
+                      <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#rotate'></use>
+                      </svg>
+                      for USDT
+                      <span></span>
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="withdraw-section__item">
+                <div class="withdraw-row">
+                  <div class="withdraw-row__box">
+                    <span class="withdraw-row__icon withdraw-row__icon--silver">
+                      <img width='45' height='45' src="./img/icons/eth.svg" alt="icon">
+                    </span>
+                    <span class="withdraw-row__title">ETH</span>
+                    <span class="withdraw-row__name">Ethereum</span>
+                  </div>
+                  <span class="withdraw-row__value">0.00000000 <b>ETH</b></span>
+                  <div class="withdraw-row__btns">
+                    <button class="blue-btn">Withdraw
+                      <span></span>
+                    </button>
+                    <button class="blue-btn">
+                      <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#rotate'></use>
+                      </svg>
+                      for USDT
+                      <span></span>
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="withdraw-section__item">
+                <div class="withdraw-row">
+                  <div class="withdraw-row__box">
+                    <span class="withdraw-row__icon withdraw-row__icon--mode">
+                      <img width='45' height='45' src="./img/icons/xrp2.svg" alt="icon">
+                    </span>
+                    <span class="withdraw-row__title">XRP</span>
+                    <span class="withdraw-row__name">Ripple</span>
+                  </div>
+                  <span class="withdraw-row__value">0.00000000 <b>XRP</b></span>
+                  <div class="withdraw-row__btns">
+                    <button class="blue-btn">Withdraw
+                      <span></span>
+                    </button>
+                    <button class="blue-btn">
+                      <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#rotate'></use>
+                      </svg>
+                      for USDT
+                      <span></span>
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="withdraw-section__item">
+                <div class="withdraw-row">
+                  <div class="withdraw-row__box">
+                    <span class="withdraw-row__icon">
+                      <img width='45' height='45' src="./img/icons/bnb2.svg" alt="icon">
+                    </span>
+                    <span class="withdraw-row__title">BNB</span>
+                    <span class="withdraw-row__name">Binance Coin</span>
+                  </div>
+                  <span class="withdraw-row__value">0.00000000 <b>BNB</b></span>
+                  <div class="withdraw-row__btns">
+                    <button class="blue-btn">Withdraw
+                      <span></span>
+                    </button>
+                    <button class="blue-btn">
+                      <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#rotate'></use>
+                      </svg>
+                      for USDT
+                      <span></span>
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="withdraw-section__item">
+                <div class="withdraw-row">
+                  <div class="withdraw-row__box">
+                    <span class="withdraw-row__icon withdraw-row__icon--orange">
+                      <img width='45' height='45' src="./img/icons/xmr2.svg" alt="icon">
+                    </span>
+                    <span class="withdraw-row__title">XMR</span>
+                    <span class="withdraw-row__name">Manero</span>
+                  </div>
+                  <span class="withdraw-row__value">0.00000000 <b>BNB</b></span>
+                  <div class="withdraw-row__btns">
+                    <button class="blue-btn">Withdraw
+                      <span></span>
+                    </button>
+                    <button class="blue-btn">
+                      <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#rotate'></use>
+                      </svg>
+                      for USDT
+                      <span></span>
+                    </button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="bar">
+    <ul class="bar__list">
+      <li class="bar__item">
+        <a href="dashboard.html" class="bar__link">
+          <span class="bar__icon">
+            <svg width='24' height='24'>
+              <use href='img/sprite/sprite.svg#dash'></use>
+            </svg>
+          </span>
+          Dashboard
+        </a>
+      </li>
+      <li class="bar__item">
+        <a href="deposit.html" class="bar__link">
+          <span class="bar__icon">
+            <svg width='24' height='24'>
+              <use href='img/sprite/sprite.svg#dash2'></use>
+            </svg>
+          </span>
+          Deposite
+        </a>
+      </li>
+      <li class="bar__item">
+        <a href="withdraw.html" class="bar__link bar__link--center">
+          <span class="bar__icon">
+            <svg width='24' height='24'>
+              <use href='img/sprite/sprite.svg#dash3'></use>
+            </svg>
+          </span>
+          Withdraw
+        </a>
+      </li>
+      <li class="bar__item">
+        <a href="referral.html" class="bar__link">
+          <span class="bar__icon">
+            <svg width='24' height='24'>
+              <use href='img/sprite/sprite.svg#dash4'></use>
+            </svg>
+          </span>
+          Affilate
+        </a>
+      </li>
+      <li class="bar__item">
+        <a href="setting.html" class="bar__link">
+          <span class="bar__icon">
+            <svg width='24' height='24'>
+              <use href='img/sprite/sprite.svg#dash7'></use>
+            </svg>
+          </span>
+          Settings
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- @include('partials/footer.html') -->
+  @include('partials/modals.html')
+</body>
+<script src="js/main.js"></script>
+
+</html>

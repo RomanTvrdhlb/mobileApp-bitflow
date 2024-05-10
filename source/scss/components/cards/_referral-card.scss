@@ -1,0 +1,90 @@
+.referral-card{
+    border-radius: 21px;
+    background: var(--gradient-e);
+    @include gradient-border(var(--gr-r), 1px);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 19px 10px;
+    align-items: center;
+    height: 100%;
+    @include for-mobile{
+        padding: 20px 10px;
+    }
+    @include mobile{
+        padding: 45px 10px 20px;
+    }
+    
+    &__title{
+        font-family: var(--second-family);
+        font-weight: 700;
+        font-size: 24px;
+        grid-column: span 2;
+    }
+
+    &__level{
+        line-height: 115%;
+        color: rgba(var(--cl-c),1.0);
+
+        @include for-mobile{
+            font-size: clamp(14px, 1.2075vw, 16px);
+
+            br{
+                display: none;
+            }
+        }
+
+        @include mobile{
+            @include for-ios{
+            font-size: 13px;
+            }
+        }
+
+        @include ios{
+            font-size: 12px;
+        }
+    }
+
+    &__icon{
+        background: rgba(var(--bg-k),1.0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        grid-row: 2;
+
+        svg{
+            width: 16px;
+            height: auto;
+        }
+
+        @include for-mobile{
+            width: clamp(31px, 3.3962vw, 45px);
+            height: clamp(31px, 3.3962vw, 45px);
+        }
+
+        @include mobile{
+            width: 31px;
+            height: 31px;
+        }
+    }
+
+    &__label{
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 2;
+        border-radius: 0 500px 350px 700px;
+        padding: 7px 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--gr-i);
+    }
+
+    &__percent{
+        font-family: var(--third-family);
+        font-weight: 700;
+        font-size: 16px;
+        color: rgba(var(--cl-f),1.0);
+    }
+}

@@ -1,0 +1,177 @@
+.deposit-card{
+    padding: 24px 14px 20px;
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+    border: solid 1px var(--br-e);
+    position: relative;
+    
+
+    &::before{
+        position: absolute;
+        z-index: -1;
+        content: '';
+        inset: 0;
+        border-radius: inherit;
+        backdrop-filter: blur(17.600000381469727px);
+        background: var(--gradient-f);
+        pointer-events: none;
+        background-color:  rgba(var(--bg-f),1.0);
+    }
+
+    .main-copy{
+        position: absolute;
+        bottom: 20px;
+        left: 14px;
+        right: 14px;
+        z-index: 5;
+        transition: all .1s ease-out;
+        opacity: 0;
+        visibility: hidden;
+
+        &.active{
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &__top{
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-gap: 2px 10px;
+        align-items: end;
+    }
+
+    &__btn{
+        width: 100%;
+        font-weight: 500;
+        font-size: 14px;
+        padding: 14px 4px 17px;
+        border-radius: 9999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--gradient-b);
+        @include gradient-border(var(--gradient-c), 1px);
+        z-index: 1;
+
+        &::after{
+            position: absolute;
+            content: '';
+            inset: 0;
+            transition: all .3s;
+            background: var(--gr-z);
+            border-radius: inherit;
+            z-index: -2;
+            opacity: 0;
+            pointer-events: none;
+            visibility: hidden;
+        }
+
+        span{
+            position: absolute;
+            content: '';
+            inset: 0;
+            transition: all .3s;
+            background: var(--gradient-d);
+            border-radius: inherit;
+            z-index: -1;
+            opacity: 0;
+            pointer-events: none;
+            visibility: hidden;
+        }
+
+        &:hover{
+           &::after{
+            opacity: 1;
+            visibility: visible;
+           }
+        }
+
+        &:focus{
+            &::after{
+                opacity: 0;
+                visibility: hidden;
+            }
+            span{
+                visibility: visible;
+                opacity: 1;
+               }
+        }
+
+        &:disabled{
+            opacity: 0.4;
+        }
+    }
+
+    &__name{
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 14px;
+        color: rgba(var(--cl-k),.5);
+        align-self: start;
+    }
+
+    &__title{
+        font-family: var(--second-family);
+        font-weight: 700;
+        font-size: 16px;
+        color: rgba(var(--cl-g),1.0);
+    }
+
+    &__icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-row: span 2;
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        background-color: rgba(227, 127, 6, .16);
+        position: relative;
+        z-index: 1;
+        svg, img{
+            width: 35px;
+            aspect-ratio: 1;
+        }
+
+        &--green{
+            background-color: rgba(236, 239, 240, .16);
+        }
+
+        &--blue{
+            background: rgba(3, 130, 209, .16);
+        }
+
+        &--red{
+            background: rgba(255, 6, 10, .16);
+        }
+
+        &--orange{
+            background: rgba(240, 5, 0, 0.16);
+        }
+
+        &--violet{
+            background: rgba(130, 71, 229, .16);
+        }
+
+        &--mode{
+            background: rgba(252, 252, 253, .16);
+        }
+
+        &--silver{
+            background: rgba(246, 246, 246, .16);
+        }
+
+        &-mini{
+            z-index: 2;
+            position: absolute;
+            right: 5px;
+            bottom: 5px;
+            width: 16px;
+            height: 16px;
+        }
+    }
+}

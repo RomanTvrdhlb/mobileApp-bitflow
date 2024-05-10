@@ -1,0 +1,24 @@
+.faq-section{
+    padding: calc(var(--header-height) + 50px) 0 142px;
+    overflow: hidden;
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 27px;
+    }
+
+    .dashboard-top{
+        grid-gap: 45px;
+    }
+
+    &__title{
+        font-family: var(--second-family);
+    }
+
+    &__col{
+        display: grid;
+        grid-gap: 14px 21px;
+        grid-template-columns: 100%;
+    }
+}
