@@ -1,7 +1,10 @@
-import {toggleClassInArray, toggleCustomClass, removeCustomClass, removeClassInArray, fadeIn, fadeOut, addCustomClass} from '../functions/customFunctions';
-
+import {removeCustomClass, addCustomClass} from '../functions/customFunctions';
 
 const cards = document.querySelectorAll('.card');
+const dashCards = document.querySelectorAll('.dashboard-card');
+const copyCards = document.querySelectorAll('.deposit-card');
+const copyForms = document.querySelectorAll('.main-copy');
+const referralCards = document.querySelectorAll('.main-referral');
 
 cards && cards.forEach(function(card){
 
@@ -62,8 +65,6 @@ cards && cards.forEach(function(card){
     // }
 })
 
-const dashCards = document.querySelectorAll('.dashboard-card');
-
 dashCards && dashCards.forEach(function(card){
     const btn = card.querySelector('.dashboard-card__btn');
     const close = card.querySelector('.dashboard-card__close');
@@ -80,8 +81,6 @@ dashCards && dashCards.forEach(function(card){
     })
 })
 
-const copyCards = document.querySelectorAll('.deposit-card');
-
 copyCards && copyCards.forEach(function(card){
     const generateBtn = card.querySelector('.deposit-card__btn');
     const form = card.querySelector('.main-copy');
@@ -93,8 +92,6 @@ copyCards && copyCards.forEach(function(card){
         addCustomClass(form, 'active');
     })
 })
-
-const copyForms = document.querySelectorAll('.main-copy');
 
 copyForms && copyForms.forEach(function(form){
     const formInput = form.querySelector('input');
@@ -116,9 +113,6 @@ copyForms && copyForms.forEach(function(form){
         });
     });
 });
-
-
-const referralCards = document.querySelectorAll('.main-referral');
 
 referralCards && referralCards.forEach(function(card){
     const valueEl = card.querySelector('[data-value]');

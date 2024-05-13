@@ -108,8 +108,6 @@
         }
     }
 
-
-    //------------------использую
     &__rules{
         display: flex;
         align-items: center;
@@ -140,16 +138,7 @@
             grid-column: span 2;
         }
     }
-    //------------------
-    .select{
-        background: rgba(var(--bg-f),1.0);
 
-        &__list{
-            background: rgba(var(--bg-f),1.0);
-        }
-    }
-
-    //------------------использую
     &--mode{
         grid-gap: 16px;
 
